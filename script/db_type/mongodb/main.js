@@ -128,4 +128,41 @@ module.exports = class Mongodb
             return new Date(value.toNumber());
         return def;
     }
+
+    static isInteger(value)
+    {
+        return typeof value === 'object' && value instanceof _Mongodb.Int32;
+    }
+
+    static isString(value)
+    {
+        return typeof value === 'string' || 
+            (typeof value === 'object' && value instanceof String);
+    }
+
+    static isFloat(value)
+    {
+        return this.isDouble(value);
+    }
+
+    static isDouble(value)
+    {
+        return typeof value === 'object' && value instanceof _Mongodb.Double;
+    }
+
+    static isBoolean(value)
+    {
+        return typeof value === 'boolean' || 
+            (typeof value === 'object' && value instanceof Boolean)
+    }
+
+    static isDate(value)
+    {
+        return typeof value === 'object' && value instanceof Date;
+    }
+
+    static isTimestamp(value)
+    {
+        return typeof value === 'object' && value instanceof _Mongodb.Timestamp;
+    }
 };
