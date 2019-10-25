@@ -77,6 +77,16 @@ module.exports = class Mongodb
             return _Mongodb.Timestamp.fromNumber(value.getTime());
     }
 
+    static toObjectId(value)
+    {
+        if (typeof value === 'number' ||
+            (typeof value === 'object' && value instanceof Number))
+            return new _Mongodb.ObjectID(value);
+        else if (typeof value === 'string' || 
+            (typeof value === 'object' && value instanceof String))
+            return new _Mongodb.ObjectID(value);
+    }
+
     static asString(value, def = "")
     {
         if (typeof value === 'object' && value instanceof _Mongodb.Int32)
@@ -93,6 +103,8 @@ module.exports = class Mongodb
             return new String(value.toDateString());
         else if (typeof value === 'object' && value instanceof _Mongodb.Timestamp)
             return new String(value.toString());
+        else if (typeof value === 'object' && value instanceof _Mongodb.ObjectID)
+            return new String(value.toHexString());
         return def;
     }
 
@@ -112,6 +124,8 @@ module.exports = class Mongodb
             return new Number(value.getTime());
         else if (typeof value === 'object' && value instanceof _Mongodb.Timestamp)
             return new Number(value.toNumber());
+        else if (typeof value === 'object' && value instanceof _Mongodb.ObjectID)
+            return new Number(Number.parseInt(value.toHexString(), 16));
         return def;
     }
 
@@ -126,6 +140,8 @@ module.exports = class Mongodb
             return new Date(value);
         else if (typeof value === 'object' && value instanceof _Mongodb.Timestamp)
             return new Date(value.toNumber());
+        else if (typeof value === 'object' && value instanceof _Mongodb.ObjectID)
+            return new Date(value.getTimestamp());
         return def;
     }
 
@@ -164,5 +180,10 @@ module.exports = class Mongodb
     static isTimestamp(value)
     {
         return typeof value === 'object' && value instanceof _Mongodb.Timestamp;
+    }
+
+    static isObjectId(value)
+    {
+        return typeof value === 'object' && value instanceof _Mongodb.ObjectID;
     }
 };
