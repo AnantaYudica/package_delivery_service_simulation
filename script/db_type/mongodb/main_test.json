@@ -1,0 +1,202 @@
+{
+    "toInteger" : [
+        {
+            "param" : [10],
+            "type_param" : ["number"],
+            "result" : "10"
+        },
+        {
+            "param" : ["10"],
+            "type_param" : ["string"],
+            "result" : "10"
+        }
+    ],
+    "toString" : [
+        {
+            "param" : [1234],
+            "type_param" : ["number"],
+            "result" : "1234"
+        },
+        {
+            "param" : [true],
+            "type_param" : ["boolean"],
+            "result" : "true"
+        },
+        {
+            "param" : ["4444"],
+            "type_param" : ["string"],
+            "result" : "4444"
+        },
+        {
+            "param" : ["01-01-1989"],
+            "type_param" : ["date"],
+            "result" : "Sun Jan 01 1989"
+        }
+    ],
+    "toFloat" : [
+        {
+            "param" : [1234.1234],
+            "type_param" : ["number"],
+            "result" : "1234.1234"
+        },
+        {
+            "param" : ["4.1234"],
+            "type_param" : ["string"],
+            "result" : "4.1234"
+        }
+    ],
+    "toDouble" : [
+        {
+            "param" : [1234.1234],
+            "type_param" : ["number"],
+            "result" : "1234.1234"
+        },
+        {
+            "param" : ["4.1234"],
+            "type_param" : ["string"],
+            "result" : "4.1234"
+        }
+    ],
+    "toBoolean" : [
+        {
+            "param" : [0],
+            "type_param" : ["number"],
+            "result" : "false"
+        },
+        {
+            "param" : ["true"],
+            "type_param" : ["string"],
+            "result" : "true"
+        }
+    ],
+    "toDate" : [
+        {
+            "param" : [599590800000],
+            "type_param" : ["number"],
+            "result" : "Sun Jan 01 1989"
+        },
+        {
+            "param" : ["01-01-1989"],
+            "type_param" : ["string"],
+            "result" : "Sun Jan 01 1989"
+        },
+        {
+            "param" : ["01-01-1989"],
+            "type_param" : ["date"],
+            "result" : "Sun Jan 01 1989"
+        }
+    ],
+    "toTimestamp" : [
+        {
+            "param" : [599590800000],
+            "type_param" : ["number"],
+            "result" : "599590800000"
+        },
+        {
+            "param" : ["599590800000"],
+            "type_param" : ["string"],
+            "result" : "599590800000"
+        },
+        {
+            "param" : ["01-01-1989"],
+            "type_param" : ["date"],
+            "result" : "599590800000"
+        }
+    ],
+    "asString" : [
+        {
+            "param" : [1234],
+            "type_param" : ["mongodb.Int32"],
+            "result" : "1234"
+        },
+        {
+            "param" : ["1234"],
+            "type_param" : ["string"],
+            "result" : "1234"
+        },
+        {
+            "param" : [4.1234],
+            "type_param" : ["mongodb.Double"],
+            "result" : "4.1234"
+        },
+        {
+            "param" : [false],
+            "type_param" : ["boolean"],
+            "result" : "false"
+        },
+        {
+            "param" : ["01-01-1989"],
+            "type_param" : ["date"],
+            "result" : "Sun Jan 01 1989"
+        },
+        {
+            "param" : [599590800000],
+            "type_param" : ["mongodb.Timestamp"],
+            "result" : "599590800000"
+        },
+        {
+            "param" : [1234, "default"],
+            "type_param" : ["number", "string"],
+            "result" : "default"
+        }
+    ],
+    "asNumber" : [
+        {
+            "param" : [1234],
+            "type_param" : ["mongodb.Int32"],
+            "result" : "1234"
+        },
+        {
+            "param" : ["1234"],
+            "type_param" : ["string"],
+            "result" : "1234"
+        },
+        {
+            "param" : [4.1234],
+            "type_param" : ["mongodb.Double"],
+            "result" : "4.1234"
+        },
+        {
+            "param" : [false],
+            "type_param" : ["boolean"],
+            "result" : "0"
+        },
+        {
+            "param" : ["01-01-1989"],
+            "type_param" : ["date"],
+            "result" : "599590800000"
+        },
+        {
+            "param" : [599590800000],
+            "type_param" : ["mongodb.Timestamp"],
+            "result" : "599590800000"
+        },
+        {
+            "param" : [1234, 0],
+            "type_param" : ["number", "number"],
+            "result" : "0"
+        }
+    ],
+    "asDate" : [
+        {
+            "param" : [599590800000],
+            "type_param" : ["mongodb.Int32"],
+            "result" : "Sun Jan 01 1989"
+        },
+        {
+            "param" : ["01-01-1989"],
+            "type_param" : ["string"],
+            "result" : "Sun Jan 01 1989"
+        },
+        {
+            "param" : ["01-01-1989"],
+            "type_param" : ["date"],
+            "result" : "Sun Jan 01 1989"
+        },
+        {
+            "param" : [599590800000],
+            "type_param" : ["mongodb.Timestamp"],
+            "result" : "Sun Jan 01 1989"
+        }
+    ]
+}
