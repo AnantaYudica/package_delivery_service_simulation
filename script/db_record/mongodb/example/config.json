@@ -1,0 +1,11 @@
+{
+    "tables" : {
+        "table1" : {
+            "primaryKey" : "col1",
+            "columns" : {
+                "col1" : {"type" : "inheritance", "default_type" : "integer"},
+                "col2" : {"type" : "string"}
+            }
+        }
+    }
+}

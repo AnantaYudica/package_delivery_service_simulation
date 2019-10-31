@@ -1,0 +1,13 @@
+{
+    "tables" : {
+        "table1" : {
+            "primaryKey" : {
+                "type" : "integer",
+                "instance" : {"option" : "increment", "start" : 1}
+            },
+            "columns" : {
+                "col1" : {"type" : "integer"}
+            }
+        }
+    }
+}
