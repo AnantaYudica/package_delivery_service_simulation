@@ -1,0 +1,15 @@
+[
+    {
+        "filename" : "sample_table.csv",
+        "name" : "sample_table",
+        "config" : {
+            "primaryKey": "col1",
+            "columns" : {
+                "col1": {"type" : "integer"},
+                "col3": {"type" : "integer"},
+                "col2": {"type" : "string"},
+                "col4": {"type" : "boolean"}
+            }
+        }
+    }
+]

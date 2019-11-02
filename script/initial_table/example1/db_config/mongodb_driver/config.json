@@ -1,0 +1,4 @@
+{
+    "options" : {"useNewUrlParser": true, "useUnifiedTopology": true},
+    "url" : "mongodb://localhost:27017/"
+}

@@ -1,0 +1,7 @@
+{
+    "db_driver" : "mongodb_driver",
+    "db_name" : "dev_test_initial_table",
+    "db_config_dir" : "db_config/",
+    "table_config_file" : "table_config.json",
+    "table_dir" : "table/"
+}
