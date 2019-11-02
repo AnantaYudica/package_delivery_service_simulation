@@ -47,10 +47,12 @@ module.exports = class Mongodb
     {
         if (typeof value === 'number' || 
             (typeof value === 'object' && value instanceof Number))
-            return new Boolean(value);
+            return Boolean(value);
         else if (typeof value === 'string' || 
             (typeof value === 'object' && value instanceof String))
-            return new Boolean(value);
+            return Boolean(value.toLowerCase() == 'true' ? true : false);
+        else if (typeof value === 'object' && value instanceof Boolean)
+            return Boolean(value.valueOf());
     }
 
     static toDate(value)
@@ -168,8 +170,7 @@ module.exports = class Mongodb
 
     static isBoolean(value)
     {
-        return typeof value === 'boolean' || 
-            (typeof value === 'object' && value instanceof Boolean)
+        return typeof value === 'boolean';
     }
 
     static isDate(value)
