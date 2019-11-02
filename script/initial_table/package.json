@@ -1,0 +1,17 @@
+{
+  "name": "initial_table",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "author": "Ananta Yudica",
+  "license": "MIT",
+  "dependencies": {
+    "csvtojson": "2.x.x",
+    "mongodb_driver": "file:./../db_driver/mongodb",
+    "mongodb_record": "file:./../db_record/mongodb"
+  }
+}
